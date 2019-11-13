@@ -6,6 +6,10 @@ const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 
 gulp.task('sass', function(){
+  const plugins = [
+    autoprefixer({ browser: ['last 2 version'] }),
+    cssnano()
+  ]
  return gulp
   .src('scss/**/*.scss')
   .pipe(sass())
