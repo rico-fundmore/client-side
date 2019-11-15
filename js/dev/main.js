@@ -10672,4 +10672,3 @@ return jQuery;
       x[n].className += " active";
     }
 
-// })

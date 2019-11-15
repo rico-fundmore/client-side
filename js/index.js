@@ -73,4 +73,3 @@
       x[n].className += " active";
     }
 
-// })

@@ -7,4 +7,9 @@
 /* MODULES - Re-usable site elements.
 ========================================================================== */ 
 
+@import 'modules/_global.scss';
 @import 'modules/_multiStepForm.scss';
+@import 'modules/_aside.scss';
+@import 'modules/_burger.scss';
+@import 'modules/_progressbar.scss';
+@import 'modules/_status.scss';

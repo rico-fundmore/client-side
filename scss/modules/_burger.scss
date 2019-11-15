@@ -1,0 +1,97 @@
+.main_nav {
+    height: 30px;
+    display: flex;
+    margin: 30px;
+}
+
+.navbar-collapse {
+    background: rgba(0, 0, 0, 0.9);
+  
+    z-index: 99;
+    position: relative;
+  
+    .navbar-nav {
+      padding: 20px 30px;
+    }
+  }
+  
+.menu {
+    width: 35px;
+    position: absolute;
+    left: 380px;
+    top: 110px;
+}  
+
+.logo {
+    width: 120px;
+} 
+  
+  
+.burger {
+      .mobile-burger {
+        width: 100%;
+        height: 20px;
+        padding-top: 15px;
+      }
+  
+      &:hover:not(.activated) {
+        span:before {
+          top: -10px;
+        }
+  
+        span:after {
+          bottom: -10px;
+        }
+      }
+  
+      span {
+        width: 100%;
+        display: block;
+        height: 3px;
+        background: darken($grey, 30%);
+        position: relative;
+  
+        @mixin burger-bar {
+          content: '';
+          display: block;
+          background-color: darken($grey, 30%);
+          width: 100%;
+          height: 3px;
+          position: absolute;
+          transition: 0.2s;
+        }
+  
+        &:before {
+          @include burger-bar;
+          top: -12px;
+        }
+  
+        &:after {
+          @include burger-bar;
+          bottom: -12px;
+        }
+  
+      }
+    }
+  
+  
+  .activated {
+    .mobile-burger {
+  
+      .burger-bars {
+        height: 0px;
+  
+        &:before {
+          transform: rotate(45deg);
+          top: calc(25% - 1px);
+        }
+  
+        &:after {
+          transform: rotate(-45deg);
+          bottom: calc(25% - 1px);
+        }
+      }
+    }
+  
+  
+  }

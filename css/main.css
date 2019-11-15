@@ -1,14 +1,104 @@
 /* BASE - Base Variable file along with starting point Mixins and Placeholders.
 ========================================================================== */
+body {
+  font-family: "Open Sans", sans-serif; }
+
 /* MODULES - Re-usable site elements.
 ========================================================================== */
+h2 {
+  font-weight: 400; }
+
+.app_container {
+  display: flex;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  background-color: #fff;
+  width: 80%;
+  min-width: 300px;
+  right: 0;
+  top: -30px;
+  bottom: 0; }
+
+/* Message style */
+.app_msg {
+  display: flex;
+  width: 1000px;
+  min-height: 150px;
+  border-radius: 5px;
+  margin: 0 auto 0;
+  background-color: #00b23b;
+  color: #FFFFFF; }
+
+.app_msg p {
+  margin: 30px; }
+
 /* Style the form */
-#regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px; }
+.regForm {
+  margin: 30px auto 0;
+  width: 1000px; }
+
+.input_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-between;
+  height: 150px; }
+
+.input_list .each_btn {
+  width: 48%;
+  height: 50px;
+  position: relative;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px; }
+
+.input_list label,
+.input_list input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.input_list input[type="radio"] {
+  opacity: 0.011;
+  z-index: 100; }
+
+.input_list input[type="radio"]:checked + label {
+  border: 2px solid #00b23b;
+  color: #00b23b; }
+
+.input_list label {
+  cursor: pointer;
+  z-index: 90;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.prevBtn, .nextBtn {
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer; }
+
+.step_buttons {
+  display: flex;
+  justify-content: space-between; }
+
+.prevBtn {
+  color: #a2a2a2;
+  background-color: #FFFFFF;
+  border: 2px solid #EEEEEE; }
+
+.nextBtn {
+  color: #FFFFFF;
+  background-color: #00b23b;
+  border: 2px solid #00b23b; }
 
 /* Style the input fields */
 input {
@@ -28,19 +118,238 @@ input.invalid {
 
 /* Make circles that indicate the steps of the form: */
 .step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbbbbb;
-  border: none;
+  height: 25px;
+  width: 25px;
+  margin: 0 30px;
+  background-color: tint(#FFFFFF, 30%);
+  border: 2px solid #FFFFFF;
   border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5; }
+  display: inline-block; }
 
 /* Mark the active step: */
 .step.active {
-  opacity: 1; }
+  background-color: #FFFFFF; }
 
 /* Mark the steps that are finished and valid: */
 .step.finish {
-  background-color: #4CAF50; }
+  background-color: #FFFFFF;
+  position: relative; }
+  .step.finish:before {
+    content: "\f00c";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    color: #1bbc9b;
+    font-family: FontAwesome; }
+
+.app_side {
+  background-color: #1BBC9B;
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FFFFFF;
+  overflow: hidden; }
+  .app_side h3 {
+    margin: 30px; }
+
+.progress_bar {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-between; }
+  .progress_bar .progress_list {
+    width: 100%;
+    display: flex;
+    align-items: center; }
+
+.main_nav {
+  height: 30px;
+  display: flex;
+  margin: 30px; }
+
+.navbar-collapse {
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 99;
+  position: relative; }
+  .navbar-collapse .navbar-nav {
+    padding: 20px 30px; }
+
+.menu {
+  width: 35px;
+  position: absolute;
+  left: 380px;
+  top: 110px; }
+
+.logo {
+  width: 120px; }
+
+.burger .mobile-burger {
+  width: 100%;
+  height: 20px;
+  padding-top: 15px; }
+
+.burger:hover:not(.activated) span:before {
+  top: -10px; }
+
+.burger:hover:not(.activated) span:after {
+  bottom: -10px; }
+
+.burger span {
+  width: 100%;
+  display: block;
+  height: 3px;
+  background: #a2a2a2;
+  position: relative; }
+  .burger span:before {
+    content: '';
+    display: block;
+    background-color: #a2a2a2;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    transition: 0.2s;
+    top: -12px; }
+  .burger span:after {
+    content: '';
+    display: block;
+    background-color: #a2a2a2;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    transition: 0.2s;
+    bottom: -12px; }
+
+.activated .mobile-burger .burger-bars {
+  height: 0px; }
+  .activated .mobile-burger .burger-bars:before {
+    transform: rotate(45deg);
+    top: calc(25% - 1px); }
+  .activated .mobile-burger .burger-bars:after {
+    transform: rotate(-45deg);
+    bottom: calc(25% - 1px); }
+
+.progress {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  color: #9a9a9a; }
+  .progress > li {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    font-size: 0.8em; }
+    .progress > li:before {
+      content: attr(data-step);
+      display: block;
+      margin: 0 auto;
+      background: #EEEEEE;
+      width: 3em;
+      height: 3em;
+      text-align: center;
+      margin-bottom: 0.25em;
+      line-height: 3em;
+      border-radius: 100%;
+      position: relative;
+      z-index: 1000; }
+    .progress > li:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: #EEEEEE;
+      width: 100%;
+      height: 0.5em;
+      top: 1.25em;
+      left: 50%;
+      margin-left: 1.5em\9;
+      z-index: -1; }
+    .progress > li:last-child:after {
+      display: none; }
+    .progress > li.is-complete {
+      color: #00b23b; }
+      .progress > li.is-complete:before, .progress > li.is-complete:after {
+        color: #FFF;
+        background: #00b23b; }
+    .progress > li.is-active {
+      color: #00b23b;
+      position: relative; }
+      .progress > li.is-active:before {
+        color: #FFF;
+        background: #00b23b; }
+
+/**
+   * Needed for IE8
+   */
+.progress__last:after {
+  display: none !important; }
+
+/**
+   * Size Extensions
+   */
+.progress--medium {
+  font-size: 1.5em; }
+
+.progress--large {
+  font-size: 2em; }
+
+/**
+ * Some Generic Stylings
+ */
+.progress {
+  margin-bottom: 30px; }
+
+a {
+  color: #00b23b;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.status_container {
+  width: 1000px;
+  margin: auto;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 30px 100px; }
+  .status_container h1 {
+    color: #00b23b;
+    font-family: "Raleway", sans-serif; }
+
+.status_side {
+  width: 20px;
+  height: 50px;
+  background-color: #1BBC9B;
+  position: absolute;
+  left: 0; }
+
+.status_sided {
+  width: 200px; }
+
+.progress_info {
+  background-color: #EEEEEE;
+  border-radius: 5px;
+  padding: 30px;
+  position: relative; }
+  .progress_info h4 {
+    color: #1BBC9B; }
+
+.summary_boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.summary_box {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  width: 25%;
+  padding: 10px 30px;
+  margin-top: 20px; }
+  .summary_box h2 {
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    margin: 10px 0; }
+  .summary_box p {
+    font-size: 1.5em;
+    margin: 10px 0; }

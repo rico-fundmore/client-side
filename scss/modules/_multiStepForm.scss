@@ -1,12 +1,113 @@
+
+
+.app_container{
+  display: flex;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  background-color: #fff;
+  width: 80%;
+  min-width: 300px; 
+  right: 0;
+  top: -$space;
+  bottom: 0;
+}
+
+/* Message style */
+.app_msg {
+  display: flex;
+  width: 1000px;
+  min-height: $box-min-height;
+  border-radius: $round-corner;
+  margin: 0 auto 0;
+  background-color: $color-primary;
+  color: $white;
+}
+
+.app_msg p{
+  margin: $space;
+}
+
 /* Style the form */
-#regForm {
-    background-color: #ffffff;
-    margin: 100px auto;
-    padding: 40px;
-    width: 70%;
-    min-width: 300px;
-  }
+.regForm {
+  margin: $space auto 0;
+  width: 1000px;
+}
   
+// Radio button style
+.input_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-between;
+  height: 150px;
+}
+
+.input_list .each_btn {
+  width: 48%;
+  height: 50px;
+  position: relative;
+  box-shadow: $shadow;
+  border-radius: $round-corner;
+}
+
+.input_list label,
+.input_list input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.input_list input[type="radio"] {
+  opacity: 0.011;
+  z-index: 100;
+}
+
+.input_list input[type="radio"]:checked+label {
+  border: 2px solid $color-primary;
+  color: $color-primary;
+}
+
+.input_list label {
+  // border: 2px solid #CCC;
+  cursor: pointer;
+  z-index: 90;
+  border-radius: $round-corner;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Button style
+.prevBtn, .nextBtn{
+  height: 40px;
+  width: 200px;
+  border-radius: $round-corner;
+  margin-top: $space;
+  cursor: pointer;
+}
+
+.step_buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.prevBtn{
+  color: darken($grey, 30%);
+  background-color: $white;
+  border: 2px solid $grey;
+}
+
+.nextBtn{
+  color: $white;
+  background-color: $color-primary;
+  border: 2px solid $color-primary;
+}
   /* Style the input fields */
   input {
     padding: 10px;
@@ -28,22 +129,33 @@
   
   /* Make circles that indicate the steps of the form: */
   .step {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbbbbb;
-    border: none;
+    height: 25px;
+    width: 25px;
+    margin: 0 $space;
+    background-color: tint($white, 30%);
+    border: 2px solid $white;
     border-radius: 50%;
     display: inline-block;
-    opacity: 0.5;
+
   }
   
   /* Mark the active step: */
   .step.active {
-    opacity: 1;
+    background-color: $white;
+
   }
   
   /* Mark the steps that are finished and valid: */
   .step.finish {
-    background-color: #4CAF50;
+    background-color: $white;
+    position: relative;
+
+    &:before{
+      content: "\f00c";
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      color: #1bbc9b;
+      font-family: FontAwesome;
+    }
   }

@@ -1,0 +1,58 @@
+.status_container{
+    width: 1000px;
+    margin: auto;
+    box-shadow: $shadow;
+    height: 100%;
+    padding: $space 100px;
+    h1{
+        color: $color-primary;
+        font-family: $font-secondary;
+    }
+}
+
+.status_side{
+    width: 20px;
+    height: 50px;
+    background-color: $color-secondary;
+    position: absolute;
+    left: 0;
+}
+
+.status_sided{
+    width: 200px;
+}
+
+.progress_info{
+    background-color: $grey;
+    border-radius: $round-corner;
+    padding: $space;
+    position: relative;
+
+    h4{
+        color: $color-secondary;
+    }
+}
+
+.summary_boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.summary_box{
+    box-shadow: $shadow;
+    width: 25%;
+    padding: 10px $space;
+    margin-top: 20px;
+
+    h2{
+        text-transform: uppercase;
+        font-family: $font-secondary;
+        margin: 10px 0;
+    }
+
+    p{
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+}

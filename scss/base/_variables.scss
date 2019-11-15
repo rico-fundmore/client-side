@@ -1,10 +1,20 @@
-$green : #00B23B;
+$green : #00b23b;
 $blue : #1BBC9B;
 $grey: #EEEEEE;
 $white : #FFFFFF;
 
 $font-primary: 'Open Sans', sans-serif; 
+$font-secondary: 'Raleway', sans-serif;
 
 $color-primary: $green;
 $color-secondary: $blue;
 $color-tertiary: $grey;
+
+$box-min-height: 150px;
+$space: 30px;
+$round-corner: 5px;
+$shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+
+body{
+    font-family: $font-primary;
+}

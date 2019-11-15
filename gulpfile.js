@@ -24,6 +24,11 @@ gulp.task('sass', function(){
 
 })
 
+gulp.task('fonts', function() {
+  return gulp.src('node_modules/font-awesome/fonts/*')
+    .pipe(gulp.dest('public/fonts'))
+})
+
 gulp.task('scripts', function () {
   return gulp.src([
     'node_modules/jquery/dist/jquery.js',

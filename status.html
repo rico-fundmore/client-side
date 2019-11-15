@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Status Page</title>
+    <link href="/favicon.ico" type="image/x-icon" rel="icon" />
+    <link rel="stylesheet" href="css\min\main.css">
+</head>
+<body>
+    <nav class="main_nav">
+        <div class="logo"></div>
+        <div class="menu">
+            <a id="burgertoggler" href="#" class="navbar-toggler mr-2 mobile-square burger d-flex" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="mobile-burger"><span class="burger-bars"></span></div>
+            </a>
+        </div>
+    </nav>
+
+    <div id="status_side" class="status_side">
+
+    </div>
+    <div class="status_container">
+        <h1>We got your application</h1>
+        <p>We will let you know when . . . </p>
+        <div class="progress_container">
+            <ol class="progress progress--medium">
+                <li class="is-complete" data-step="1">
+                    Step 1
+                </li>
+                <li class="is-active" data-step="2">
+                    Step 2
+                </li>
+                <li data-step="3" class="3">
+                    Step 3
+                </li>
+                <li data-step="4" class="4">
+                    Step 4
+                </li>
+                <li data-step="5" class="progress__last">
+                    Step 5
+                </li>
+            </ol>
+
+            <div class="progress_info">
+                <div class="info_left">
+                    <p>
+                        Description of this stage. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta fringilla interdum. Aliquam id dui tincidunt, vestibulum lectus at, pharetra ante. Maecenas condimentum ultricies nunc, quis consequat quam lacinia ac.
+                    </p>
+                </div>
+                <div class="info_right">
+                    <div class="info_action">
+                        <h4>You need to prepare:</h4>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, impedit dicta.</li>
+                        </ul>
+                    </div>
+                    <div class="info_action">
+                        <h4>Expected:</h4>
+                        <P>Friday, November 11</P>
+                    </div>  
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="summary_boxes">
+            <div class="summary_box">
+                <h2>Status</h2>    
+                <p>In Progress</p>    
+            </div>
+            <div class="summary_box">
+                <h2>Due Date</h2>
+                <p>11/12/2019</p>    
+            </div>
+            <div class="summary_box">
+                <h2>Due In</h2> 
+                <p>30 Days</p>   
+            </div>
+        </div>
+        
+    </div>    
+        
+<script>
+const $burgertoggler = document.getElementById('burgertoggler');
+const $status_side = document.getElementById('status_side');
+
+$burgertoggler.addEventListener('click', function () {
+//   const isMenuOpen = JSON.parse($burgertoggler.getAttribute('aria-expanded'))
+//   if (isMenuOpen) {
+    $burgertoggler.classList.toggle('activated');
+    $status_side.classList.toggle('status_sided');
+//   } else {
+    // $burgertoggler.classList.add('activated');
+//   }
+
+})
+// })
+</script>
+    <!-- <script src="js\min\main.min.js"></script> -->
+</body>
+</html>
