@@ -1,5 +1,8 @@
 // jQuery.noConflict();
 // jQuery.ready(function() {
+
+
+
     var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
     
@@ -10,8 +13,10 @@
       // ... and fix the Previous/Next buttons:
       if (n == 0) {
         document.getElementById("prevBtn").style.display = "none";
+        document.getElementById("step_buttons").style.justifyContent = "flex-end";
       } else {
         document.getElementById("prevBtn").style.display = "inline";
+        document.getElementById("step_buttons").style.justifyContent = "space-between";
       }
       if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "Submit";

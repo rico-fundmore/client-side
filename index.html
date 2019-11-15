@@ -10,112 +10,30 @@
   <link rel="stylesheet" href="css\min\main.css">
 </head>
 <body>
-  <nav></nav>
-  <!-- Sidebar -->
-  <aside class="app_side">
-    <h3>Your Application Progress</h3>
-    <!-- Circles which indicates the steps of the form: -->
-    <div class="progress_bar">
-      <div class="progress_list"><span class="step"></span>Progress 1</div>
-      <div class="progress_list"><span class="step"></span>Progress 2</div>
-      <div class="progress_list"><span class="step"></span>Progress 3</div>
-      <div class="progress_list"><span class="step"></span>Progress 4</div>
-      <div class="progress_list"><span class="step"></span>Progress 5</div>
+  <nav class="main_nav">
+    <div class="nav_in"><span>fund<strong>more</strong>.ai</span>
     </div>
-  </aside>
-  <div class="app_container">
-    <div class="app_msg">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, temporibus!</p>
+    <div class="nav_in">
+      <a href="">Login</a>
     </div>
-      <form class="regForm" id="regForm" action="">        
-          <!-- One "tab" for each step in the form: -->
-          <div class="tab slide_panel">
-            <h2>Name:</h2>
-            <div class="input_list" id="">
-                <div class="each_btn">
-                    <input type="radio" id="first" name="loanType_check[]" value="first" checked="checked">
-                    <label for="first">First</label>
-                </div>
-                <div class="each_btn">
-                    <input type="radio" id="second" name="loanType_check[]" value="second">
-                    <label for="second">Second</label>
-                </div>
-                <div class="each_btn">
-                    <input type="radio" id="third" name="loanType_check[]" value="third">
-                    <label for="third">Third</label>
-                </div>
-                <div class="each_btn">
-                    <input type="radio" id="fourth" name="loanType_check[]" value="fourth">
-                    <label for="fourth">Third</label>
-                </div>
-            </div>
-          </div>
-          
-          <div class="tab">
-              <h2>Name:</h2>
-              <div class="input_list" id="">
-                  <div class="each_btn">
-                      <input type="radio" id="first" name="loanType_check[]" value="first" checked="checked">
-                      <label for="first">First</label>
-                  </div>
-                  <div class="each_btn">
-                      <input type="radio" id="second" name="loanType_check[]" value="second">
-                      <label for="second">Second</label>
-                  </div>
-                  <div class="each_btn">
-                      <input type="radio" id="third" name="loanType_check[]" value="third">
-                      <label for="third">Third</label>
-                  </div>
-              </div>
-          </div>
-          
-          <div class="tab">
-              <h2>Name:</h2>
-              <div class="input_list" id="">
-                  <div class="each_btn">
-                      <input type="radio" id="first" name="loanType_check[]" value="first" checked="checked">
-                      <label for="first">First</label>
-                  </div>
-                  <div class="each_btn">
-                      <input type="radio" id="second" name="loanType_check[]" value="second">
-                      <label for="second">Second</label>
-                  </div>
-                  <div class="each_btn">
-                      <input type="radio" id="third" name="loanType_check[]" value="third">
-                      <label for="third">Third</label>
-                  </div>
-              </div>
-          </div>
-          
-          <div class="tab">
-            <h2>Name:</h2>
-            <p><input placeholder="Username..." oninput="this.className = ''"></p>
-            <p><input placeholder="Password..." oninput="this.className = ''"></p>
-            <p><input placeholder="Password..." oninput="this.className = ''"></p>
-            <p><input placeholder="Password..." oninput="this.className = ''"></p>
-            <p><input placeholder="Password..." oninput="this.className = ''"></p>
-          </div>
-
-          <div class="tab">
-            <h2>When your closing date?</h2>
-            <p><input placeholder="Username..." oninput="this.className = ''"></p>
-          </div>
-
-          <div class="tab">
-            <h2>How much money do you need?</h2>
-            <p><input placeholder="Username..." oninput="this.className = ''"></p>
-          </div>
-          
-          <div style="overflow:auto;">
-            <div class="step_buttons">
-              <button type="button" id="prevBtn" class="prevBtn" onclick="nextPrev(-1)">Previous</button>
-              <button type="button" id="nextBtn" class="nextBtn" onclick="nextPrev(1)">Next</button>
-            </div>
-          </div> 
-        </form>
+  </nav>
+  <div class="start_option">
+    <div class="option">
+      <a href="form.html">
+        <h2>I'm buying a home</h2>
+        <img src="img/newhouse.svg" alt="newhouse">
+      </a>
+    </div>
+    <div class="option">
+      <a href="form.html">
+        <h2>I'm refinancing my home</h2>
+        <img src="img/refinance.svg" alt="newhouse">
+      </a>
+    </div>
   </div>
+  <!-- Sidebar -->
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js\min\main.min.js"></script>
 </body>
 </html>

@@ -1,3 +1,41 @@
+body{
+    font-family: $font-primary;
+    overflow: hidden;
+}
+
 h2{
     font-weight: 400;
 }
+
+.main_nav {
+    height: 30px;
+    display: flex;
+    padding: $space;
+    background-color: $color-primary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    justify-content: space-between;
+
+    .nav_in, .nav_in a{
+        width: 120px;
+        color: $white;
+        font-family: 'Nunito', sans-serif;
+        font-size: 34px;
+    } 
+    .nav_in a{
+        font-size: 24px;
+        
+        &:hover{
+         text-decoration: none;  
+        }
+    } 
+
+}
+
+button:focus{
+    outline: none;
+}
+  
